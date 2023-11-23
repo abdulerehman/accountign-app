@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-))^$^*!e8$u@)zu$1fdf_sr0ry(v^fww@m09n*_qa3jd7dljn%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 USE_I18N = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 LANGUAGE = ["en"]
 JAZZMIN_SETTINGS = {
     'related_modal_active': False,
@@ -116,6 +116,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+STATIC_ROOT = 'admin'
+STATIC_URL = "static/"
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    "/var/www/static/",
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
